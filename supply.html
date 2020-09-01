@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="www.frebsite.nl" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Organic Food Grocery</title>
+
+	<!-- Custom CSS -->
+	<link href="assets/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body class="grocery-theme">
+
+	<div id="preloader">
+		<div class="preloader"><span></span><span></span></div>
+	</div>
+
+
+	<div id="main-wrapper">
+
+		<!-- Top header  -->
+		<!-- Start Navigation -->
+		<div class="header">
+			<!-- Topbar -->
+			<div class="header_topbar dark">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-lg-6 col-md-6 col-sm-6 col-4">
+							<ul class="tp-list nbr ml-2">
+								<li class="dropdown dropdown-currency hidden-xs hidden-sm">
+									<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Eng<i
+											class="ml-1 fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu mlix-wrap">
+										<li><a href="#">English</a></li>
+										<li><a href="#">Hindi</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-8">
+							<div class="topbar_menu">
+								<ul>
+									<li><a href="login.html"><i class="ti-bag"></i>Login</a></li>
+									<!-- <li><a href="#"><i class="ti-location-pin"></i>Track Order</a></li> -->
+									<!-- <li class="hide-m"><a href="#"><i class="ti-heart"></i>Favourites</a></li> -->
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Main header -->
+			<div class="general_header">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-2 col-md-2 col-sm-3 col-4">
+							<a class="nav-brand" href="#">
+								<img src="assets/img/grocery-logo.png" class="logo" alt="" />
+							</a>
+						</div>
+						<div class="col-lg-7 col-md-7 col-sm-4 col-3">
+							<nav id="navigation" class="navigation navigation-landscape">
+								<div class="nav-header">
+									<div class="nav-toggle"></div>
+								</div>
+								<div class="nav-menus-wrapper" style="transition-property: none;">
+									<ul class="nav-menu">
+
+										<li class="active"><a href="index.html">Home</a></li>
+
+										<li><a href="#">Shop<span class="submenu-indicator"></span></a>
+											<ul class="nav-dropdown nav-submenu">
+												<li><a href="supply.html">Supply</a></li>
+												<li><a href="demand.html">Demand</a></li>
+											</ul>
+										</li>
+										<li class="active"><a href="about.html">About</a></li>
+									</ul>
+
+								</div>
+							</nav>
+						</div>
+
+						<div class="col-lg-3 col-md-3 col-sm-5 col-5">
+							<div class="general_head_right">
+								<ul>
+									<li><a data-toggle="collapse" href="#mySearch" role="button" aria-expanded="false"
+											aria-controls="mySearch"><i class="ti-search"></i></a></li>
+									<li><a href="account-info.html"><i class="ti-user"></i></a></li>
+									<li><a href="add-to-cart.html"><i class="ti-shopping-cart"></i></a></li>
+								</ul>
+							</div>
+							<div class="collapse" id="mySearch">
+								<div class="blocks search_blocks">
+									<div class="input-group">
+										<input type="text" class="form-control"
+											placeholder="Search entire store here...">
+										<div class="input-group-append">
+											<button class="btn search_btn" type="button"><i
+													class="ti-search"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- End Navigation -->
+		<div class="clearfix"></div>
+		<!-- Top header  -->
+
+
+		<!-- =========================== Breadcrumbs =================================== -->
+		<div class="breadcrumbs_wrap dark">
+			<div class="container">
+				<div class="row align-items-center">
+
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="text-center">
+							<h2 class="breadcrumbs_title">Supply</h2>
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#"><i class="ti-home"></i></a></li>
+									<li class="breadcrumb-item"><a href="#">Shop</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Supply</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- =========================== Breadcrumbs =================================== -->
+
+
+		<!-- =========================== Search Products =================================== -->
+		<section>
+			<div class="container-fluid">
+
+				<div class="row">
+
+					<!-- Single Product -->
+					<div class="col-lg-3 col-md-12">
+						<div class="search-sidebar sm-sidebar" id="filter_search" style="left:0;">
+							<div class="search-sidebar_header">
+								<h4 class="ssh_heading">Close Filter</h4>
+								<button onclick="closeFilterSearch()" class="w3-bar-item w3-button w3-large"><i
+										class="ti-close"></i></button>
+							</div>
+							<div class="search-sidebar-body">
+
+								<!-- Single Option -->
+								<div class="single_search_boxed">
+									<div class="widget-boxed-header">
+										<h4 class="ml-4 mt-4">Categories</h4>
+									</div>
+									<div class="widget-boxed-body">
+										<div class="side-list no-border">
+											<div class="filter-card" id="shop-categories">
+
+												<!-- Single Filter Card -->
+												<div class="single_filter_card">
+													<h5><a href="#clothing" data-toggle="collapse" class=""
+															aria-expanded="false" role="button">Vegetables<i
+																class="accordion-indicator ti-angle-down"></i></a></h5>
+
+													<div class="collapse show" id="vegetables"
+														data-parent="#shop-categories">
+														<div class="card-body">
+															<div class="inner_widget_link">
+																<ul>
+																	<li><a href="#">Tomato<span>82</span></a></li>
+																	<li><a href="#">broccoli<span>110</span></a></li>
+																	<li><a href="#">cucumber<span>103</span></a></li>
+																	<li><a href="#">pumpkin<span>72</span></a></li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Single Option -->
+								<div class="single_search_boxed">
+									<div class="widget-boxed-header">
+										<h4><a href="#discount" data-toggle="collapse" class="collapsed"
+												aria-expanded="false" role="button">Discount</a></h4>
+									</div>
+									<div class="widget-boxed-body collapse" id="discount" data-parent="#discount">
+										<div class="side-list no-border">
+											<!-- Single Filter Card -->
+											<div class="single_filter_card">
+												<div class="card-body pt-0">
+													<div class="inner_widget_link">
+														<ul class="no-ul-list">
+															<li>
+																<input id="d1" class="checkbox-custom" name="d1"
+																	type="checkbox">
+																<label for="d1" class="checkbox-custom-label">80%
+																	Discount<span>22</span></label>
+															</li>
+															<li>
+																<input id="d2" class="checkbox-custom" name="d2"
+																	type="checkbox">
+																<label for="d2" class="checkbox-custom-label">60%
+																	Discount<span>472</span></label>
+															</li>
+															<li>
+																<input id="d3" class="checkbox-custom" name="d3"
+																	type="checkbox">
+																<label for="d3" class="checkbox-custom-label">50%
+																	Discount<span>170</span></label>
+															</li>
+															<li>
+																<input id="d4" class="checkbox-custom" name="d4"
+																	type="checkbox">
+																<label for="d4" class="checkbox-custom-label">40%
+																	Discount<span>170</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Single Option -->
+								<div class="single_search_boxed">
+									<div class="widget-boxed-header">
+										<h4><a href="#types" data-toggle="collapse" class="collapsed"
+												aria-expanded="false" role="button">Type</a></h4>
+									</div>
+									<div class="widget-boxed-body collapse" id="types" data-parent="#types">
+										<div class="side-list no-border">
+											<!-- Single Filter Card -->
+											<div class="single_filter_card">
+												<div class="card-body pt-0">
+													<div class="inner_widget_link">
+														<ul class="no-ul-list">
+															<li>
+																<input id="t1" class="checkbox-custom" name="t1"
+																	type="checkbox">
+																<label for="t1" class="checkbox-custom-label">All
+																	Type<span>422</span></label>
+															</li>
+															<li>
+																<input id="t2" class="checkbox-custom" name="t2"
+																	type="checkbox">
+																<label for="t2" class="checkbox-custom-label">vegetables
+																	<span>472</span></label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-9 col-md-12">
+
+						<!-- Shorter Toolbar -->
+						<div class="row">
+							<div class="col-lg-12 col-md-12">
+								<div class="toolbar toolbar-products">
+									<div class="toolbar-sorter sorter">
+										<label class="sorter-label" for="sorter">Sort By</label>
+										<select id="sorter" data-role="sorter" class="sorter-options">
+											<option value="position" selected="selected">Position</option>
+											<option value="name">Product Name</option>
+											<option value="price">Price</option>
+										</select>
+										<a href="#" class="action sorter-action"><i class="ti-arrow-up"></i></a>
+									</div>
+
+									<div class="field limiter">
+										<label class="label" for="limiter">
+											<span>Locations</span>
+										</label>
+										<div class="control">
+											<select id="limiter" data-role="limiter" class="limiter-options">
+												<option value="5">Delhi</option>
+												<option value="10" selected="selected">Bangalore</option>
+												<option value="15">UP</option>
+												<option value="20">Kerala</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- row -->
+						<div class="row">
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_pr_tag hot">Hot</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/1.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/2.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_pr_tag new">New</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/3.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_offer_sell">Save 20% Off</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/4.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_pr_tag hot">Hot</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/5.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/6.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_pr_tag hot">Hot</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/7.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_pr_tag new">New</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/vegetables/8.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<div class="woo_product_thumb">
+										<img src="assets/img/fruits/1.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_pr_tag hot">Hot</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/fruits/2.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<div class="woo_product_thumb">
+										<img src="assets/img/fruits/3.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Single Item -->
+							<div class="col-lg-3 col-md-4 col-sm-6">
+								<div class="woo_product_grid">
+									<span class="woo_pr_tag new">New</span>
+									<div class="woo_product_thumb">
+										<img src="assets/img/fruits/4.png" class="img-fluid" alt="" />
+									</div>
+									<div class="woo_product_caption center">
+										<div class="woo_rate">
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star filled"></i>
+											<i class="fa fa-star"></i>
+										</div>
+										<div class="woo_title">
+											<h4 class="woo_pro_title"><a href="detail-1.html">Accumsan Tree Fusce</a>
+											</h4>
+										</div>
+										<div class="woo_price">
+											<h6>Rs. 72.47<span class="less_price">Rs. 112.10</span></h6>
+										</div>
+									</div>
+									<div class="woo_product_cart hover">
+										<ul>
+											<li><a href="product_details.html" class="woo_cart_btn btn_cart"><i
+														class="ti-eye"></i></a></li>
+											<li><a href="add-to-cart.html" class="woo_cart_btn btn_view"><i
+														class="ti-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- row -->
+
+						<div class="row">
+							<div class="col-lg-12">
+								<nav aria-label="Page navigation example">
+									<ul class="pagination">
+										<li class="page-item left">
+											<a class="page-link" href="#" aria-label="Previous">
+												<span aria-hidden="true"><i class="ti-arrow-left mr-1"></i>Prev</span>
+											</a>
+										</li>
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item active"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item right">
+											<a class="page-link" href="#" aria-label="Next">
+												<span aria-hidden="true"><i class="ti-arrow-right mr-1"></i>Next</span>
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- =========================== Search Products =================================== -->
+
+
+
+
+		<!-- ============================ Footer Start ================================== -->
+		<footer class="dark-footer skin-dark-footer style-2">
+			<div class="before-footer">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-lg-4 col-md-4">
+							<div class="single_facts">
+								<div class="facts_icon">
+									<i class="ti-shopping-cart"></i>
+								</div>
+								<div class="facts_caption">
+									<h4>Home Delivery</h4>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-4">
+							<div class="single_facts">
+								<div class="facts_icon">
+									<i class="ti-money"></i>
+								</div>
+								<div class="facts_caption">
+									<h4>Your Price Display</h4>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-4">
+							<div class="single_facts last">
+								<div class="facts_icon">
+									<i class="ti-headphone-alt"></i>
+								</div>
+								<div class="facts_caption">
+									<h4>24x7 Online Support</h4>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-middle">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-lg-4 col-md-4">
+							<div class="footer_widget">
+								<h4 class="extream">Contact us</h4>
+								<p>Let's here all about it! <a href="#" class="theme-cl">Get it touch</a></p>
+
+								<div class="address_infos">
+									<ul>
+										<li><i class="ti-home theme-cl"></i>Jayanagar Bangalore<br>Karnataka</li>
+										<li><i class="ti-headphone-alt theme-cl"></i>(+91) 987 6543 210</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-2">
+							<div class="footer_widget">
+								<h4 class="widget_title">Categories</h4>
+								<ul class="footer-menu">
+									<li><a href="#">Organic</a></li>
+									<li><a href="#">Grocery</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-2">
+							<div class="footer_widget">
+								<h4 class="widget_title">Our Company</h4>
+								<ul class="footer-menu">
+									<li><a href="#">About Us</a></li>
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="col-lg-2 col-md-2">
+							<div class="footer_widget">
+								<h4 class="widget_title">Customer Support</h4>
+								<ul class="footer-menu">
+									<li><a href="#">Conditions</a></li>
+									<li><a href="#">Privacy</a></li>
+									<li><a href="#">FAQs</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row align-items-center">
+
+						<div class="col-lg-6 col-md-8">
+							<p class="mb-0">©Copyright 2020.</p>
+						</div>
+
+						<div class="col-lg-6 col-md-6 text-right">
+							<ul class="footer_social_links">
+								<li><a href="#"><i class="ti-facebook"></i></a></li>
+								<li><a href="#"><i class="ti-twitter"></i></a></li>
+								<li><a href="#"><i class="ti-instagram"></i></a></li>
+								<li><a href="#"><i class="ti-linkedin"></i></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- ============================ Footer End ================================== -->
+
+
+	</div>
+	<!-- End Wrapper -->
+
+	<!-- All Jquery -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/metisMenu.min.js"></script>
+	<script src="assets/js/owl-carousel.js"></script>
+	<script src="assets/js/ion.rangeSlider.min.js"></script>
+	<script src="assets/js/smoothproducts.js"></script>
+	<script src="assets/js/jquery-rating.js"></script>
+	<script src="assets/js/jQuery.style.switcher.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<!-- This page plugins -->
+
+	<script>
+		function openRightMenu() {
+			document.getElementById("rightMenu").style.display = "block";
+		}
+		function closeRightMenu() {
+			document.getElementById("rightMenu").style.display = "none";
+		}
+	</script>
+
+</body>
+
+</html>
